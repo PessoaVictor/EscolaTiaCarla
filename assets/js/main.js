@@ -656,7 +656,7 @@ function initializeCounters() {
             if (current >= target) {
                 clearInterval(timer);
             }
-        }, 150); // 150ms entre cada número (1.5 segundos total para chegar em 10)
+        }, 150);
     }
     
     const observer = new IntersectionObserver((entries) => {

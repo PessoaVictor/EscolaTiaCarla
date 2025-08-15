@@ -20,12 +20,10 @@ class GalleryController {
     }
 
     setupGalleryElements() {
-        const galleryContainer = document.getElementById('gallery-grid');
         this.galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
         
         this.galleryItems.forEach((item, index) => {
             const img = item.querySelector('img');
-            const category = item.dataset.category || 'all';
             
             if (img) {
                 img.loading = 'lazy';
@@ -108,7 +106,6 @@ class GalleryController {
 
     setupModal() {
         this.modal = document.getElementById('gallery-modal');
-        const modalImage = document.getElementById('modal-image');
         const modalClose = document.querySelector('.modal-close');
         const modalPrev = document.querySelector('.modal-prev');
         const modalNext = document.querySelector('.modal-next');
@@ -355,7 +352,7 @@ class GalleryController {
         });
         
         const containerWidth = container.offsetWidth;
-        const itemWidth = 300; // Base item width
+        const itemWidth = 300;
         const gap = 20;
         const columns = Math.floor(containerWidth / (itemWidth + gap));
         
@@ -447,8 +444,6 @@ class GalleryController {
     }
 
     shareImage() {
-        const modalImage = document.getElementById('modal-image');
-        
         if (navigator.share) {
             navigator.share({
                 title: 'Escola Tia Carla',

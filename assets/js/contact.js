@@ -17,7 +17,7 @@ class ContactController {
             },
             phone: {
                 required: true,
-                pattern: /^[\d\s\(\)\-\+]+$/,
+                pattern: /^[\d\s()\-+]+$/,
                 minLength: 10,
                 message: 'Telefone deve ter pelo menos 10 dígitos'
             },
@@ -326,23 +326,6 @@ class ContactController {
     submitForm(data) {
         setTimeout(() => {
             this.handleSubmissionSuccess(data);
-            
-            /*
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                this.handleSubmissionSuccess(data);
-            })
-            .catch(error => {
-                this.handleSubmissionError(error);
-            });
-            */
         }, 2000);
     }
 
@@ -421,7 +404,7 @@ class ContactController {
     }
 
     openWhatsApp(customMessage = '') {
-        const phone = '5581986766673'; // Replace with actual phone number
+        const phone = '5581986766673';
         const message = customMessage || 'Olá! Gostaria de saber mais informações sobre a Escola Tia Carla.';
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
@@ -433,9 +416,14 @@ class ContactController {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
         
-        const icon = type === 'success' ? 'check-circle' : 
-                    type === 'error' ? 'exclamation-triangle' : 
-                    'info-circle';
+        let icon;
+        if (type === 'success') {
+            icon = 'check-circle';
+        } else if (type === 'error') {
+            icon = 'exclamation-triangle';
+        } else {
+            icon = 'info-circle';
+        }
         
         notification.innerHTML = `
             <div class="notification-content">
@@ -447,11 +435,20 @@ class ContactController {
             </div>
         `;
         
+        let backgroundColor;
+        if (type === 'success') {
+            backgroundColor = '#51CF66';
+        } else if (type === 'error') {
+            backgroundColor = '#FF6B6B';
+        } else {
+            backgroundColor = '#4ECDC4';
+        }
+        
         notification.style.cssText = `
             position: fixed;
             top: 20px;
             right: 20px;
-            background: ${type === 'success' ? '#51CF66' : type === 'error' ? '#FF6B6B' : '#4ECDC4'};
+            background: ${backgroundColor};
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 10px;
