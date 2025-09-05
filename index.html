@@ -593,5 +593,18 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form form');
+            
+            if (form) {
+                form.addEventListener('submit', function() {
+                    setTimeout(() => {
+                        form.reset();
+                    }, 1000);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -58,7 +58,6 @@ class ContactController {
             if (!isValid) {
                 e.preventDefault();
                 this.showNotification('Por favor, corrija os erros no formulário', 'error');
-                return;
             }
         });
 
