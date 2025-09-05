@@ -53,8 +53,13 @@ class ContactController {
         }
 
         this.form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.handleFormSubmission();
+            const isValid = this.validateForm();
+            
+            if (!isValid) {
+                e.preventDefault();
+                this.showNotification('Por favor, corrija os erros no formulário', 'error');
+                return;
+            }
         });
 
         this.setupFloatingLabels();
@@ -283,20 +288,7 @@ class ContactController {
     }
 
     handleFormSubmission() {
-        if (this.isSubmitting) return;
-        
-        const isValid = this.validateForm();
-        
-        if (!isValid) {
-            this.showNotification('Por favor, corrija os erros no formulário', 'error');
-            return;
-        }
-        
-        this.setSubmitLoading(true);
-        
-        const formData = this.getFormData();
-        
-        this.submitForm(formData);
+        console.log('Form submission handled by Formspree');
     }
 
     validateForm() {

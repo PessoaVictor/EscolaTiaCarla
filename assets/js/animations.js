@@ -353,9 +353,16 @@ class AnimationController {
     }
 
     slideIn(element, direction = 'left', duration = 500) {
-        const translateValue = direction === 'left' ? '-100%' : 
-                             direction === 'right' ? '100%' : 
-                             direction === 'up' ? '-100%' : '100%';
+        let translateValue;
+        if (direction === 'left') {
+            translateValue = '-100%';
+        } else if (direction === 'right') {
+            translateValue = '100%';
+        } else if (direction === 'up') {
+            translateValue = '-100%';
+        } else {
+            translateValue = '100%';
+        }
         
         const property = (direction === 'left' || direction === 'right') ? 'translateX' : 'translateY';
         
@@ -540,27 +547,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const hero = document.querySelector('.hero');
     if (hero) {
-        new ParticleSystem(hero, {
+        const heroParticles = new ParticleSystem(hero, {
             count: 30,
             color: 'rgba(255, 107, 157, 0.1)',
             size: 3,
             speed: 0.5
         });
+        animationController.heroParticles = heroParticles;
     }
 });
-
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
