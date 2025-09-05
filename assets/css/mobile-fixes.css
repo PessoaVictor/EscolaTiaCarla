@@ -1,0 +1,203 @@
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px !important;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    
+    * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    p, span, h1, h2, h3, h4, h5, h6, a {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 800px) and (-webkit-device-pixel-ratio: 3),
+       screen and (width: 360px) and (height: 800px) and (-webkit-device-pixel-ratio: 3) {
+    
+    .whatsapp-float {
+        right: max(10px, env(safe-area-inset-right, 10px));
+        bottom: max(15px, env(safe-area-inset-bottom, 15px));
+    }
+    
+    .back-to-top {
+        right: max(10px, env(safe-area-inset-right, 10px));
+        bottom: max(75px, calc(env(safe-area-inset-bottom, 15px) + 60px));
+    }
+    
+    .nav-toggle {
+        right: max(15px, env(safe-area-inset-right, 15px));
+    }
+    
+    .container {
+        padding-left: max(10px, env(safe-area-inset-left, 10px));
+        padding-right: max(10px, env(safe-area-inset-right, 10px));
+    }
+}
+
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+    
+    .whatsapp-float {
+        right: max(15px, env(safe-area-inset-right));
+        bottom: max(15px, env(safe-area-inset-bottom));
+    }
+    
+    .back-to-top {
+        right: max(15px, env(safe-area-inset-right));
+        bottom: max(75px, calc(env(safe-area-inset-bottom) + 60px));
+    }
+    
+    .nav-menu {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+@media screen and (min-aspect-ratio: 9/16) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .programs-grid,
+    .activities-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (pointer: coarse) {
+    .nav-link,
+    .btn,
+    .filter-btn,
+    .social-links a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn:active,
+    .nav-link:active,
+    .filter-btn:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .program-card,
+    .contact-form {
+        text-align: center;
+    }
+    
+    .program-card .btn,
+    .contact-form .btn {
+        margin: 1rem auto 0;
+        display: block;
+        width: fit-content;
+        min-width: 180px;
+    }
+    
+    .contact-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+    .contact-icon {
+        margin: 0 auto 0.8rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .contact-details {
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .contact-details h3,
+    .contact-details p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .program-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .program-icon {
+        margin: 0 auto 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .program-content {
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .whatsapp-float a,
+    .back-to-top,
+    .nav-toggle,
+    .btn {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@media (prefers-contrast: high) {
+    .whatsapp-float a {
+        border: 3px solid #fff;
+    }
+    
+    .back-to-top {
+        border: 3px solid #fff;
+    }
+}

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="description" content="Escola Tia Carla - Educação Infantil de qualidade para crianças de 1 ano e 8 meses a 6 anos. Maternal ao Jardim.">
+    <meta name="keywords" content="educação infantil, creche, maternal, jardim, escola infantil, hotelzinho">
+    <title>Escola Tia Carla - Educação Infantil de Qualidade</title>
+    
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
+    <link rel="stylesheet" href="assets/css/placeholders.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="assets/images/logo.jpeg" alt="Escola Tia Carla">
+            </div>
+            <h1 class="loading-text">Escola Tia Carla</h1>
+            <p class="loading-subtitle">Preparando um mundo de descobertas...</p>
+            
+            <div class="children-animation">
+                <span class="child-figure">🧒</span>
+                <span class="child-figure">👧</span>
+                <span class="child-figure">🧒</span>
+                <span class="child-figure">👶</span>
+            </div>
+            
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <p class="loading-status" id="loading-status">Carregando recursos...</p>
+            
+            <button id="emergency-skip" class="emergency-skip" style="display: none;" onclick="forceSkipLoading()">
+                Pular carregamento
+            </button>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/logo.jpeg" alt="Escola Tia Carla">
+                    <span>Escola Tia Carla</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#programs" class="nav-link">Programas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#activities" class="nav-link">Atividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-title">
+                        Bem-vindos à
+                        <span class="highlight">Escola Tia Carla</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Educação infantil de qualidade com carinho e dedicação para o desenvolvimento completo do seu filho
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn btn-primary">
+                            <i class="fas fa-graduation-cap"></i>
+                            Nossos Programas
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-phone"></i>
+                            Entre em Contato
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-section" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="hero-img-wrapper">
+                        <img src="assets/images/image-1.png?v=1" 
+                             alt="Crianças felizes na Escola Tia Carla" 
+                             class="hero-main-image"
+                             onload="console.log('Image loaded successfully')"
+                             onerror="console.log('Image failed to load')">
+                        <div class="floating-elements">
+                            <div class="floating-icon floating-icon-1">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="floating-icon floating-icon-2">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="floating-icon floating-icon-3">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Sobre a Escola Tia Carla</h2>
+                <p class="section-subtitle">Cuidando e educando com amor há anos</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
+                    <h3>Nossa Missão</h3>
+                    <p>
+                        Na Escola Tia Carla, acreditamos que cada criança é única e especial. Nossa missão é proporcionar 
+                        um ambiente seguro, acolhedor e estimulante onde as crianças possam crescer, aprender e se desenvolver 
+                        de forma integral.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Cuidado Personalizado</h4>
+                                <p>Atenção individual para cada criança respeitando seu ritmo de desenvolvimento</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Desenvolvimento Cognitivo</h4>
+                                <p>Atividades que estimulam o pensamento crítico e a criatividade</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Socialização</h4>
+                                <p>Ambiente que promove a interação social e o desenvolvimento emocional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="assets/images/carla.jpg" alt="Tia Carla com crianças">
+                    <div class="experience-counter">
+                        <div class="counter-card">
+                            <span class="counter-number" data-count="10">0</span>
+                            <span class="counter-plus">+</span>
+                            <span class="counter-text">Anos de<br>Experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nossos Programas</h2>
+                <p class="section-subtitle">Programas especializados para cada faixa etária</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Educação Infantil</h3>
+                        <div class="program-details">
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>1 ano e 8 meses à 6 anos</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Maternal à Jardim</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>13h30 às 17h30</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar-week"></i>
+                                <span>Segunda à Sexta-feira</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Programa educacional completo com atividades pedagógicas adequadas para cada faixa etária, 
+                            focando no desenvolvimento integral da criança.
+                        </p>
+                        <a href="#contact" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+                
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="program-content">
+                        <h3>Hotelzinho / Integral</h3>
+                        <div class="program-details">
+                            <div class="detail">
+                                <i class="fas fa-brain"></i>
+                                <span>Atendimento Psicopedagógico</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Atendimento Pedagógico</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>7h às 17h30</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar-week"></i>
+                                <span>Segunda à Sexta-feira</span>
+                            </div>
+                        </div>
+                        <p class="program-description">
+                            Cuidado integral com atividades supervisionadas, 
+                            acompanhamento pedagógico e psicopedagógico especializado.
+                        </p>
+                        <a href="#contact" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities" id="activities">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nossas Atividades</h2>
+                <p class="section-subtitle">Diversão e aprendizado em cada momento</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Arte e Criatividade</h3>
+                    <p>Desenvolvimento da criatividade através de pinturas, desenhos e trabalhos manuais</p>
+                </div>
+                
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Música e Movimento</h3>
+                    <p>Atividades musicais que estimulam a coordenação motora e expressão corporal</p>
+                </div>
+                
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Contação de Histórias</h3>
+                    <p>Desenvolvimento da linguagem e imaginação através de histórias encantadoras</p>
+                </div>
+                
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="activity-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Atividades Físicas</h3>
+                    <p>Jogos e brincadeiras que promovem o desenvolvimento motor e social</p>
+                </div>
+                
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="activity-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Espaço Cinema</h3>
+                    <p>Sessões de filmes educativos e lúdicos que estimulam a imaginação e o aprendizado</p>
+                </div>
+                
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="activity-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Jogos Educativos</h3>
+                    <p>Atividades lúdicas que desenvolvem raciocínio lógico e resolução de problemas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nossa Galeria</h2>
+                <p class="section-subtitle">Momentos especiais na Escola Tia Carla</p>
+            </div>
+            
+            <div class="gallery-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="activities">Atividades</button>
+                <button class="filter-btn" data-filter="playground">Playground</button>
+                <button class="filter-btn" data-filter="events">Eventos</button>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item" data-category="activities" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/atividade1.png" alt="Atividade de arte">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="playground" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/playground1.png" alt="Playground">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/evento1.png" alt="Evento especial">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="activities" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/images/atividade2.png" alt="Atividade educativa">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="playground" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/images/playground2.png" alt="Brincadeiras">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/images/evento2.png" alt="Festa junina">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">O que os Pais Dizem</h2>
+                <p class="section-subtitle">Depoimentos de famílias satisfeitas</p>
+            </div>
+            
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Quando meu filho iniciou sua vida escolar, ele não falava. Era um momento de muitas dúvidas e inseguranças para nós. Hoje, só temos gratidão pela equipe maravilhosa dessa escola, que acolheu, cuidou e estimulou meu filho com tanto carinho e profissionalismo. O desenvolvimento dele foi incrível, e grande parte disso devemos ao ambiente acolhedor, aos professores dedicados e ao suporte individualizado que ele recebeu desde o início. Muito obrigada por fazerem parte dessa jornada tão especial!"</p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/testimonials/depoimento-henry.png" alt="Nicoly e Victor">
+                            <div class="author-info">
+                                <h4>Nicoly e Victor</h4>
+                                <span>Pais do Henry, 3 anos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Venha conhecer nosso espaço e nossa proposta pedagógica</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Endereço</h3>
+                            <p>Rua Golfinho, 24A<br>Ouro Preto, Olinda - PE<br>CEP: 53370-192</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefone</h3>
+                            <p>(81) 98676-6673<br>WhatsApp</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>contato@escolatiacarla.com.br<br></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda à Sexta: 7h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form action="https://formspree.io/f/mzzakjkw" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nome Completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Seu Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Telefone (opcional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select name="subject">
+                                <option value="informacoes">Informações Gerais</option>
+                                <option value="matricula">Matrícula</option>
+                                <option value="visita">Agendar Visita</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.jpeg" alt="Escola Tia Carla">
+                        <span>Escola Tia Carla</span>
+                    </div>
+                    <p>Educação infantil de qualidade com carinho e dedicação para o desenvolvimento completo do seu filho.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/escolatiacarla" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/escolatiacarla" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5581986766673" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#programs">Programas</a></li>
+                        <li><a href="#activities">Atividades</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nossos Programas</h3>
+                    <ul class="footer-links">
+                        <li>Educação Infantil</li>
+                        <li>Maternal (1a8m - 3 anos)</li>
+                        <li>Jardim (4 - 6 anos)</li>
+                        <li>Hotelzinho Integral</li>
+                        <li>Atividades Extras</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Golfinho, 24A - Ouro Preto/Olinda-PE</p>
+                        <p><i class="fas fa-phone"></i> (81) 98676-6673</p>
+                        <p><i class="fas fa-envelope"></i> contato@escolatiacarla.com.br</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Escola Tia Carla. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://pessoavictor.github.io/Portfolio/" target="_blank" style="color:#007bff;font-weight:bold;text-decoration:underline;">Victor Pessoa</a> e <a href="https://nicolykethylin.github.io/portifolio/" target="_blank" style="color:#007bff;font-weight:bold;text-decoration:underline;">Nicoly Pessoa</a> com <i class="fas fa-heart"></i> para cuidar e educar</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5581986766673" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <div class="modal" id="gallery-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="" alt="" id="modal-image">
+            <div class="modal-nav">
+                <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.dependenciesLoaded = {
+            fontAwesome: false,
+            googleFonts: false,
+            aos: false
+        };
+        
+        const fontAwesomeTest = document.createElement('i');
+        fontAwesomeTest.className = 'fas fa-heart';
+        fontAwesomeTest.style.position = 'absolute';
+        fontAwesomeTest.style.visibility = 'hidden';
+        document.body.appendChild(fontAwesomeTest);
+        
+        setTimeout(() => {
+            const computed = window.getComputedStyle(fontAwesomeTest);
+            if (computed.fontFamily.indexOf('Font Awesome') !== -1) {
+                window.dependenciesLoaded.fontAwesome = true;
+            }
+            document.body.removeChild(fontAwesomeTest);
+        }, 1000);
+        
+        if (document.fonts && document.fonts.check) {
+            setTimeout(() => {
+                try {
+                    if (document.fonts.check('16px Poppins') || document.fonts.check('16px "Fredoka One"')) {
+                        window.dependenciesLoaded.googleFonts = true;
+                    }
+                } catch (e) {
+                    console.warn('Erro ao verificar Google Fonts:', e.message);
+                    window.dependenciesLoaded.googleFonts = true;
+                }
+            }, 1500);
+        } else {
+            window.dependenciesLoaded.googleFonts = true;
+        }
+        
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') {
+                window.dependenciesLoaded.aos = true;
+            }
+        }, 500);
+        
+        setTimeout(() => {
+            window.dependenciesLoaded = {
+                fontAwesome: true,
+                googleFonts: true,
+                aos: true
+            };
+        }, 5000);
+        
+        setTimeout(() => {
+            const emergencyBtn = document.getElementById('emergency-skip');
+            if (emergencyBtn && document.getElementById('loading-screen').style.display !== 'none') {
+                emergencyBtn.style.display = 'block';
+            }
+        }, 15000);
+        
+        window.forceSkipLoading = function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.classList.add('hidden');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+                
+                if (typeof AOS !== 'undefined') {
+                    try {
+                        AOS.init({
+                            duration: 1000,
+                            once: true,
+                            offset: 100
+                        });
+                    } catch (e) {
+                        console.warn('Erro ao inicializar AOS:', e);
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form form');
+            
+            if (form) {
+                form.addEventListener('submit', function() {
+                    setTimeout(() => {
+                        form.reset();
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

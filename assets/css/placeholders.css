@@ -1,0 +1,231 @@
+
+img[src*="about-teacher.jpg"],
+img[src*="gallery/"],
+img[src*="team/"],
+img[src*="testimonials/"] {
+    position: relative;
+    background: linear-gradient(135deg, #FF6B9D, #4ECDC4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+img[src*="about-teacher.jpg"]::before {
+    content: "👩‍🏫\A Tia Carla\A com as Crianças";
+    white-space: pre-line;
+    font-size: 1.2rem;
+}
+
+img[src*="gallery/activity-1.jpg"]::before {
+    content: "🎨\A Atividade\A de Arte";
+    white-space: pre-line;
+}
+
+img[src*="gallery/activity-2.jpg"]::before {
+    content: "📚\A Atividade\A Educativa";
+    white-space: pre-line;
+}
+
+img[src*="gallery/playground-1.jpg"]::before {
+    content: "🛝\A Playground\A Diversão";
+    white-space: pre-line;
+}
+
+img[src*="gallery/playground-2.jpg"]::before {
+    content: "⚽\A Brincadeiras\A ao Ar Livre";
+    white-space: pre-line;
+}
+
+img[src*="gallery/event-1.jpg"]::before {
+    content: "🎉\A Evento\A Especial";
+    white-space: pre-line;
+}
+
+img[src*="gallery/event-2.jpg"]::before {
+    content: "🌽\A Festa\A Junina";
+    white-space: pre-line;
+}
+
+img[src*="team/tia-carla.jpg"]::before {
+    content: "👩‍🏫\A Tia Carla\A Diretora";
+    white-space: pre-line;
+}
+
+img[src*="team/teacher-1.jpg"]::before {
+    content: "👩‍🏫\A Professora\A Ana";
+    white-space: pre-line;
+}
+
+img[src*="team/teacher-2.jpg"]::before {
+    content: "👩‍🏫\A Professora\A Maria";
+    white-space: pre-line;
+}
+
+img[src*="testimonials/parent-1.jpg"]::before {
+    content: "👩\A Maria\A Silva";
+    white-space: pre-line;
+}
+
+img[src*="testimonials/parent-2.jpg"]::before {
+    content: "👨\A João\A Santos";
+    white-space: pre-line;
+}
+
+img[src*="testimonials/parent-3.jpg"]::before {
+    content: "👩\A Ana\A Costa";
+    white-space: pre-line;
+}
+
+img {
+    position: relative;
+}
+
+img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF6B9D, #4ECDC4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+img[src=""],
+img:not([src]),
+img[src="#"] {
+    background: linear-gradient(135deg, #FF6B9D, #4ECDC4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+img[src=""]::after,
+img:not([src])::after,
+img[src="#"]::after {
+    content: "🖼️\A Imagem\A Placeholder";
+    white-space: pre-line;
+    display: flex;
+}
+
+img {
+    background: linear-gradient(135deg, #FFE5F1, #E8F8F7);
+    min-height: 200px;
+}
+
+.nav-logo img,
+.footer-logo img {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.nav-logo img::before,
+.footer-logo img::before {
+    content: "🎨\A ETC";
+    white-space: pre-line;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    img[src*="hero-children.jpg"]:not([loaded])::before,
+    img[src*="about-teacher.jpg"]::before {
+        font-size: 1rem;
+    }
+    
+    img[src*="gallery/"]::before,
+    img[src*="team/"]::before,
+    img[src*="testimonials/"]::before {
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes placeholderPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+img[src*="placeholder"]::before,
+img::after {
+    animation: placeholderPulse 2s ease-in-out infinite;
+}
+
+.about-image img {
+    min-height: 500px;
+}
+
+.gallery-item img {
+    min-height: 250px;
+}
+
+.team-member .member-photo img {
+    min-height: 250px;
+}
+
+.testimonial-author img {
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+}
+
+.nav-logo img[src*="logo.jpeg"],
+.footer-logo img[src*="logo.jpeg"] {
+    background: linear-gradient(135deg, #FF6B9D, #4ECDC4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.nav-logo img[src*="logo.jpeg"]::before,
+.footer-logo img[src*="logo.jpeg"]::before {
+    content: "ETC";
+    font-family: 'Fredoka One', cursive;
+}
+
+.gallery-item:hover img::before,
+.team-member:hover img::before {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.loading-image {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
